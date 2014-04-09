@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show different page for PC and mobile</title>
+  <script src="device.js"></script>
+</head>
+
+<body style="margin: auto; position: absolute; width:100%; height: 100%">
+
+<script>
+ var isMobile = device.mobile();
+            isTable = device.tablet();
+
+    if(isMobile | isTable){
+        window.open("m.html","_self");
+    }
+    else{
+         window.open("pc.html","_self");
+    }
+</script>
+</body>
+</html>
