@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>collapsible demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+ 
+<div data-role="page" id="page1">
+  <div data-role="header">
+    <h1>jQuery Mobile Example</h1>
+  </div>
+  <div role="main" class="ui-content">
+      <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+          <div data-role="collapsible" class="expand">
+              <h3>Section 1</h3>
+              <p>I'm the collapsible content for section 1</p>
+          </div>
+          <div data-role="collapsible" class="expand">
+              <h3>Section 2</h3>
+              <p>I'm the collapsible content for section 2</p>
+          </div>
+          <div data-role="collapsible" class="expand">
+              <h3>Section 3</h3>
+              <p>I'm the collapsible content for section 3</p>
+          </div>
+      </div>
+  </div>
+</div>
+    <script>
+        //change the color of font to red when expanded
+        $( ".expand" ).on( "collapsibleexpand", function( event, ui ) {
+            $('a.ui-collapsible-heading-toggle').css({"color":"rgb(51,51,51)"});
+            $('a.ui-collapsible-heading-toggle',this).css({"color":"red"});
+        } ).on( "collapsiblecollapse", function( event, ui ) {
+            $('a.ui-collapsible-heading-toggle').css({"color":"rgb(51,51,51)"});
+        } );
+    </script>
+ 
+</body>
+</html>
+
